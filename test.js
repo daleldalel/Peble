@@ -1,4 +1,4 @@
-console.log('Simply.js demo!');
+console.log('Simply.js!');
 
 simply.on('singleClick', function(e) {
   console.log(util2.format('single clicked $button!', e));
