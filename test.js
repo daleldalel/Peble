@@ -17,7 +17,11 @@ simply.on('accelTap', function(e) {
   simply.subtitle('Tapped ' + (e.direction > 0 ? '+' : '-') + e.axis + '!');
 });
 
-ajax({ url: 'http://simplyjs.io' }, function(data){
-  var headline = data.match(/<h1>(.*?)<\/h1>/)[1];
-  simply.title(headline);
+navigator.geolocation.getCurrentPosition(function(pos) {
+  var coords = pos.coords;
+  var weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?' +
+      'lat=' + coords.latitude + '&lon=' + coords.longitude + '&units=metric';
+  ajax({ url: weatherUrl, type: 'json' }, function(data) {
+    simply.text({ title: data.name, subtitle: data.main.temp });
+  });
 });
