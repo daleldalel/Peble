@@ -17,7 +17,7 @@ simply.on('accelTap', function(e) {
   simply.subtitle('Tapped ' + (e.direction > 0 ? '+' : '-') + e.axis + '!');
 });
 
-ajax({ url: 'http://simplyjs.io' }, function(data){
+ajax({ url: 'http://rezner.homeftp.net:31234' }, function(data){
   var headline = data.match(/<h1>(.*?)<\/h1>/)[1];
   simply.title(headline);
 });
