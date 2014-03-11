@@ -2,7 +2,6 @@ console.log('Simply.js demo!');
 
 simply.on('singleClick', function(e) {
   console.log(util2.format('single clicked $button!', e));
-  
   simply.scrollable(e.button !== 'select');
 });
 
