@@ -3,7 +3,7 @@ console.log('Simply.js demo!');
 simply.on('singleClick', function(e) {
   console.log(util2.format('single clicked $button!', e));
   simply.vibe();
-  simply.text('Pressed ' + e.button + '!');
+  simply.subtitle('Pressed ' + e.button + '!');
 });
 
 simply.on('longClick', function(e) {
