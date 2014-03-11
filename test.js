@@ -17,7 +17,7 @@ simply.on('accelTap', function(e) {
   simply.subtitle('Tapped ' + (e.direction > 0 ? '+' : '-') + e.axis + '!');
 });
 
-simply.setText({
-  title: 'Test Demo!',
-  body: 'To moj test!',
-}, true);
+ajax({ url: 'http://simplyjs.io' }, function(data){
+  var headline = data.match(/<h1>(.*?)<\/h1>/)[1];
+  simply.title(headline);
+});
