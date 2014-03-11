@@ -2,12 +2,12 @@ console.log('Simply.js demo!');
 
 simply.on('singleClick', function(e) {
   console.log(util2.format('single clicked $button!', e));
-  simply.subtitle(e.button !== 'select');
+  simply.vibe();
+  simply.scrollable('Pressed ' + e.button + '!');
 });
 
 simply.on('longClick', function(e) {
   console.log(util2.format('long clicked $button!', e));
-  simply.vibe();
   simply.subtitle('Pressed ' + e.button + '!');
 });
 
