@@ -5,8 +5,8 @@ var count = parseInt(localStorage.getItem('count')) || 0;
 simply.on('singleClick', function(e) {
   if (e.button === 'up') {
     ajax({ url: 'https://api.ninja.is/rest/v0/device/WEBHOOK_0_0_108/subdevice/SvkqV/tickle/e6ecc2ec1cad9c11022a18cb02068a589a36fe23' }, function(data){
-      var headline = data.match(/<h1>(.*?)<\/h1>/)[1];
-      simply.title(headline);
+    simply.subtitle(++count);
+    simply.subtitle('pozar');
     });
   } else if (e.button === 'down') {
     simply.subtitle(--count);
