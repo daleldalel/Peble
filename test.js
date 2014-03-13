@@ -43,9 +43,9 @@ simply.on('singleClick', function(e) {
         break;
       case 4:
         if (state[4]) {
-          ajax({ url: 'http://rezner.homeftp.net:8202/?S21' }, function(data){});
+          ajax({ url: 'http://rezner.homeftp.net:8202/?S41' }, function(data){});
         }
-        else {ajax({ url: 'http://rezner.homeftp.net:8202/?S31' }, function(data){});}
+        else {ajax({ url: 'http://rezner.homeftp.net:8202/?S51' }, function(data){});}
         state[4]=! state[4];
         localStorage.setItem('hifi', state[4]);
         break;
