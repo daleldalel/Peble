@@ -1,8 +1,8 @@
 console.log('Simply.js demo!');
 
 var count1 = parseInt(localStorage.getItem('count1')) || 0;
-var swich[]=['lounge','kids','bedroom','micro','hifi','backdoor'];
-var state[6];
+var swich=['lounge','kids','bedroom','micro','hifi','backdoor'];
+var state=new Array;
 var state[3]=parseInt(localStorage.getItem('micro') || 0;
 var state[4]=parseInt(localStorage.getItem('hifi') || 0;
 var state[5]=parseInt(localStorage.getItem('backdoor') || 0;
