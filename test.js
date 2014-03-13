@@ -15,8 +15,8 @@ simply.on('singleClick', function(e) {
     if (count>5) {
       count=0;
     }
-    };
-   else if (e.button === 'down') {
+    }
+  else if (e.button === 'down') {
     simply.subtitle(--count1);
     if (count <0){
       count=5;
@@ -58,7 +58,7 @@ simply.on('singleClick', function(e) {
         localStorage.setItem('backdoor', state[5]);
         break;
     }
-  }
+  };
   localStorage.setItem('count', count1);
   
 });
