@@ -1,7 +1,7 @@
 console.log('Simply.js demo!');
 
 var count1 = parseInt(localStorage.getItem('count1')) || 0;
-var swich=['lounge','kids','bedroom','micro','hifi','backdoor'];
+
 var state=new Array;
 state[3]=parseInt(localStorage.getItem('micro')) || 0;
 state[4]=parseInt(localStorage.getItem('hifi')) || 0;
@@ -10,15 +10,15 @@ state[5]=parseInt(localStorage.getItem('backdoor')) || 0;
 simply.on('singleClick', function(e) {
   if (e.button === 'up') {
     //ajax({ url: 'http://rezner.homeftp.net:8202/?G0' }, function(data){
-    simply.subtitle(++count1);
+  
     //simply.subtitle('pozar');
-    if (count1>5) {
+    if (++count1>5) {
       count1=0;
     }
     }
   else if (e.button === 'down') {
-    simply.subtitle(--count1);
-    if (count1 <0){
+ 
+    if (--count1 <0){
       count1=5;
     }
   }
@@ -63,7 +63,9 @@ simply.on('singleClick', function(e) {
   
 });
 
-simply.text({ title: 'Control', subtitle: swich[count1] });
+simply.text(
+  var swich=['lounge','kids','bedroom','micro','hifi','backdoor'];
+  { title: 'Control', subtitle: swich[count1] });
 
 /*simply.on('longClick', function(e) {
   console.log(util2.format('long clicked $button!', e));
