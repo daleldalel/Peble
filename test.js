@@ -60,7 +60,8 @@ simply.on('singleClick', function(e) {
     }
   };
   localStorage.setItem('count1', count1);
-  
+  simply.text(
+    { title: 'Control', subtitle: swich[count1] });
 });
 
 simply.text(
