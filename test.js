@@ -15,8 +15,8 @@ simply.on('singleClick', function(e) {
     if (count>5) {
       count=0;
     }
-    });
-  } else if (e.button === 'down') {
+    };
+   else if (e.button === 'down') {
     simply.subtitle(--count1);
     if (count <0){
       count=5;
@@ -25,35 +25,35 @@ simply.on('singleClick', function(e) {
   else if (e.button === 'select') {
     switch (count){
       case 0:
-        ajax({ url: 'http://rezner.homeftp.net:8202/?L44' }, function(data);
+        ajax({ url: 'http://rezner.homeftp.net:8202/?L44' }, function(data));
         break;
       case 1:
-        ajax({ url: 'http://rezner.homeftp.net:8202/?L00' }, function(data);
+        ajax({ url: 'http://rezner.homeftp.net:8202/?L00' }, function(data));
         break;
       case 2:
-        ajax({ url: 'http://rezner.homeftp.net:8202/?L14' }, function(data);
+        ajax({ url: 'http://rezner.homeftp.net:8202/?L14' }, function(data));
         break;
       case 3:
         if (state[3]) {
-          ajax({ url: 'http://rezner.homeftp.net:8202/?S01' }, function(data);
+          ajax({ url: 'http://rezner.homeftp.net:8202/?S01' }, function(data));
         }
-        else {ajax({ url: 'http://rezner.homeftp.net:8202/?S11' }, function(data);}
+        else {ajax({ url: 'http://rezner.homeftp.net:8202/?S11' }, function(data));}
         state[3]=! state[3];
         localStorage.setItem('micro', state[3]);
         break;
       case 4:
         if (state[4]) {
-          ajax({ url: 'http://rezner.homeftp.net:8202/?S21' }, function(data);
+          ajax({ url: 'http://rezner.homeftp.net:8202/?S21' }, function(data));
         }
-        else {ajax({ url: 'http://rezner.homeftp.net:8202/?S31' }, function(data);}
+        else {ajax({ url: 'http://rezner.homeftp.net:8202/?S31' }, function(data));}
         state[4]=! state[4];
         localStorage.setItem('hifi', state[4]);
         break;
       case 5:
         if (state[5]) {
-          ajax({ url: 'http://rezner.homeftp.net:8202/?S80' }, function(data);
+          ajax({ url: 'http://rezner.homeftp.net:8202/?S80' }, function(data));
         }
-        else {ajax({ url: 'http://rezner.homeftp.net:8202/?S90' }, function(data);}
+        else {ajax({ url: 'http://rezner.homeftp.net:8202/?S90' }, function(data));}
         state[5]=! state[5];
         localStorage.setItem('backdoor', state[5]);
         break;
