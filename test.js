@@ -12,18 +12,18 @@ simply.on('singleClick', function(e) {
     //ajax({ url: 'http://rezner.homeftp.net:8202/?G0' }, function(data){
     simply.subtitle(++count1);
     //simply.subtitle('pozar');
-    if (count>5) {
-      count=0;
+    if (count1>5) {
+      count1=0;
     }
     }
   else if (e.button === 'down') {
     simply.subtitle(--count1);
-    if (count <0){
-      count=5;
+    if (count1 <0){
+      count1=5;
     }
   }
   else if (e.button === 'select') {
-    switch (count){
+    switch (count1){
       case 0:
         ajax({ url: 'http://rezner.homeftp.net:8202/?L44' }, function(data){});
         break;
