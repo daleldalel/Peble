@@ -59,7 +59,7 @@ simply.on('singleClick', function(e) {
         break;
     }
   };
-  localStorage.setItem('count', count1);
+  localStorage.setItem('count1', count1);
   
 });
 
