@@ -1,11 +1,12 @@
 console.log('Simply.js demo!');
 
 var count1 = parseInt(localStorage.getItem('count1')) || 0;
-var swich=['lounge','kids','bedroom','micro','hifi','backdoor'];
+var swich=['lounge','kids','bedroom','micro','hifi','backdoor','safty'];
 var state=new Array;
 state[3]=parseInt(localStorage.getItem('micro')) || 0;
 state[4]=parseInt(localStorage.getItem('hifi')) || 0;
 state[5]=parseInt(localStorage.getItem('backdoor')) || 0;
+state[6]=parseInt(localStorage.getItem('safety')) || 0;
 
 simply.on('singleClick', function(e) {
   if (e.button === 'up') {
@@ -56,6 +57,14 @@ simply.on('singleClick', function(e) {
         else {ajax({ url: 'http://rezner.homeftp.net:8202/?W110' }, function(data){});}
         state[5]=! state[5];
         localStorage.setItem('backdoor', state[5]);
+        break;
+      case 6:
+        if (state[6]) {
+          ajax({ url: 'http://rezner.homeftp.net:8201/?S50' }, function(data){});
+        }
+        else {ajax({ url: 'http://rezner.homeftp.net:8201/?S51' }, function(data){});}
+        state[6]=! state[6];
+        localStorage.setItem('safety', state[6]);
         break;
     }
   };
