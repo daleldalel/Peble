@@ -60,9 +60,9 @@ simply.on('singleClick', function(e) {
         break;
       case 6:
         if (state[6]) {
-          ajax({ url: 'http://rezner.homeftp.net:8201/?S50' }, function(data){});
+          ajax({ url: 'http://rezner.homeftp.net:8200/?S50' }, function(data){});
         }
-        else {ajax({ url: 'http://rezner.homeftp.net:8201/?S51' }, function(data){});}
+        else {ajax({ url: 'http://rezner.homeftp.net:8200/?S51' }, function(data){});}
         state[6]=! state[6];
         localStorage.setItem('safety', state[6]);
         break;
