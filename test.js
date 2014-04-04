@@ -51,9 +51,9 @@ simply.on('singleClick', function(e) {
         break;
       case 5:
         if (state[5]) {
-          ajax({ url: 'http://rezner.homeftp.net:8202/?S80' }, function(data){});
+          ajax({ url: 'http://rezner.homeftp.net:8202/?W100' }, function(data){});
         }
-        else {ajax({ url: 'http://rezner.homeftp.net:8202/?S90' }, function(data){});}
+        else {ajax({ url: 'http://rezner.homeftp.net:8202/?W110' }, function(data){});}
         state[5]=! state[5];
         localStorage.setItem('backdoor', state[5]);
         break;
