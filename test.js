@@ -1,7 +1,7 @@
 console.log('Simply.js demo!');
 
 var count1 = parseInt(localStorage.getItem('count1')) || 0;
-var swich=['lounge','kids','bedroom','micro','hifi','backdoor','safety'];
+var swich=['lounge','kids','bedroom','micro','hifi','backdoor','safety','corridor'];
 var state=new Array;
 state[3]=parseInt(localStorage.getItem('micro')) || 0;
 state[4]=parseInt(localStorage.getItem('hifi')) || 0;
@@ -13,14 +13,14 @@ simply.on('singleClick', function(e) {
     //ajax({ url: 'http://rezner.homeftp.net:8202/?G0' }, function(data){
   
     //simply.subtitle('pozar');
-    if (++count1>6) {
+    if (++count1>7) {
       count1=0;
     }
     }
   else if (e.button === 'down') {
  
     if (--count1 <0){
-      count1=6;
+      count1=7;
     }
   }
   else if (e.button === 'select') {
@@ -65,6 +65,10 @@ simply.on('singleClick', function(e) {
         else {ajax({ url: 'http://rezner.homeftp.net:8200/?S51' }, function(data){});}
         state[6]=! state[6];
         localStorage.setItem('safety', state[6]);
+        break;
+      case 7:
+        ajax({ url: 'http://rezner.homeftp.net:8202/?L24' }, function(data){});
+        ajax({ url: 'http://rezner.homeftp.net:8202/?L25' }, function(data){});
         break;
     }
   };
