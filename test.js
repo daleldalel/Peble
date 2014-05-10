@@ -1,7 +1,7 @@
 console.log('Simply.js demo!');
 
 var count1 = parseInt(localStorage.getItem('count1')) || 0;
-var swich=['lounge','kids','bedroom','micro','hifi','backdoor','safety','corridor'];
+var swich=['lounge','kids','bedroom','micro','hifi','backdoor','safety','corridor','Gate open'];
 var state=new Array;
 state[3]=parseInt(localStorage.getItem('micro')) || 0;
 state[4]=parseInt(localStorage.getItem('hifi')) || 0;
@@ -69,6 +69,9 @@ simply.on('singleClick', function(e) {
       case 7:
         ajax({ url: 'http://rezner.homeftp.net:8202/?L24' }, function(data){});
         ajax({ url: 'http://rezner.homeftp.net:8202/?L25' }, function(data){});
+        break;
+      case 8:
+        ajax({ url: 'http://rezner.homeftp.net:8202/?W080' }, function(data){});
         break;
     }
   };
