@@ -1,9 +1,9 @@
 console.log('Simply.js demo!');
 
 var count1 = parseInt(localStorage.getItem('count1')) || 0;
-var swich=['lounge','kids','bedroom','micro','hifi','backdoor','safety','corridor','Gate open'];
+var swich=['lounge','kids','bedroom','gate','hifi','backdoor','safety','corridor','Gate jedno'];
 var state=new Array;
-state[3]=parseInt(localStorage.getItem('micro')) || 0;
+state[3]=parseInt(localStorage.getItem('gate')) || 0;
 state[4]=parseInt(localStorage.getItem('hifi')) || 0;
 state[5]=parseInt(localStorage.getItem('backdoor')) || 0;
 state[6]=parseInt(localStorage.getItem('safety')) || 0;
@@ -36,9 +36,9 @@ simply.on('singleClick', function(e) {
         break;
       case 3:
         if (state[3]) {
-          ajax({ url: 'http://rezner.homeftp.net:8202/?S01' }, function(data){});
+          ajax({ url: 'http://rezner.homeftp.net:8301/gateOpen.py' }, function(data){});
         }
-        else {ajax({ url: 'http://rezner.homeftp.net:8202/?S11' }, function(data){});}
+        else {ajax({ url: 'http://rezner.homeftp.net:8301/gateClose.py' }, function(data){});}
         state[3]=! state[3];
         localStorage.setItem('micro', state[3]);
         break;
@@ -71,7 +71,7 @@ simply.on('singleClick', function(e) {
         ajax({ url: 'http://rezner.homeftp.net:8202/?L25' }, function(data){});
         break;
       case 8:
-        ajax({ url: 'http://rezner.homeftp.net:8202/?W080' }, function(data){});
+        ajax({ url: 'http://rezner.homeftp.net:8301/gateSingle.py' }, function(data){});
         break;
     }
   };
