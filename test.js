@@ -1,7 +1,7 @@
 console.log('Simply.js demo!');
 
 var count1 = parseInt(localStorage.getItem('count1')) || 0;
-var swich=['lounge','kids','bedroom','gate','hifi','backdoor','safety','corridor','Gate jedno'];
+var swich=['lounge','kids','bedroom','gate','hifi','backdoor','safety','corridor','gateJedno'];
 var state=new Array;
 state[3]=parseInt(localStorage.getItem('gate')) || 0;
 state[4]=parseInt(localStorage.getItem('hifi')) || 0;
@@ -13,14 +13,14 @@ simply.on('singleClick', function(e) {
     //ajax({ url: 'http://rezner.homeftp.net:8202/?G0' }, function(data){
   
     //simply.subtitle('pozar');
-    if (++count1>7) {
+    if (++count1>8) {
       count1=0;
     }
     }
   else if (e.button === 'down') {
  
     if (--count1 <0){
-      count1=7;
+      count1=8;
     }
   }
   else if (e.button === 'select') {
