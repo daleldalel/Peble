@@ -13,14 +13,14 @@ simply.on('singleClick', function(e) {
     //ajax({ url: 'http://rezner.homeftp.net:8202/?G0' }, function(data){
   
     //simply.subtitle('pozar');
-    if (++count1>8) {
+    if (++count1>9) {
       count1=0;
     }
     }
   else if (e.button === 'down') {
  
     if (--count1 <0){
-      count1=8;
+      count1=9;
     }
   }
   else if (e.button === 'select') {
