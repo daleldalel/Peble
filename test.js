@@ -36,14 +36,14 @@ simply.on('singleClick', function(e) {
         break;
       case 3:
         if (state[3]) {
-          ajax({ url: 'http://rezner.homeftp.net:8301/gateOpen.py' }, function(data){});
+          ajax({ url: 'http://rezner.homeftp.net:8301/cgi-bin/gateOpen.py' }, function(data){});
         }
-        else {ajax({ url: 'http://rezner.homeftp.net:8301/gateClose.py' }, function(data){});}
+        else {ajax({ url: 'http://rezner.homeftp.net:8301/cgi-bin/gateClose.py' }, function(data){});}
         state[3]=! state[3];
         localStorage.setItem('micro', state[3]);
         break;
       case 4:
-        ajax({ url: 'http://rezner.homeftp.net:8301/gateSingle.py' }, function(data){});
+        ajax({ url: 'http://rezner.homeftp.net:8301/cgi-bin/gateSingle.py' }, function(data){});
         break;
       case 5:
         if (state[5]) {
